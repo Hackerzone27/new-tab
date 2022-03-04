@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+}
+.head p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  color: var(--title-color);
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.head p span.typed-text {
+  color: #ff6c0a;
+}
+.head p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.head p span.cursor.typing {
+  animation: none;
+}
+a img{
+    width: 50px;
+    aspect-ratio: 1;
+}
+.icn{
+    
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    border-radius: 15px;
+    box-shadow: -6px -6px 16px var(--white-color), 
+              6px 6px 16px hsla(var(--hue-color), 30%, 86%, 1); 
+              
+    transition: .4s;
+}
+.icn:hover{
+    box-shadow: inset 6px 6px 16px hsla(var(--hue-color), 30%, 86%, 1), 
+                inset -6px -6px 16px var(--white-color);
+}
+.dark-theme .icn:hover{
+    box-shadow: inset -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1), 
+                inset 6px 6px 12px hsla(var(--hue-color), 8%, 12%, 1);
+}
+.dark-theme .icn{
+    box-shadow: 6px 6px 16px hsla(var(--hue-color), 8%, 12%, 1), 
+              -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1);
+              
+}
+.web{
+    display: flex;
+}
+.icons{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 55vh;
+    border-top:var(--title-color) solid ;
+}
+.holder{
+    display: grid;
+    justify-items: center;
+    height: 100vh;
+    width: calc(100vw - 330px);
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
